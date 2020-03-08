@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://bantu4me.github.io</id>
     <title>Gridea</title>
-    <updated>2020-03-08T05:11:35.050Z</updated>
+    <updated>2020-03-08T05:36:37.761Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://bantu4me.github.io"/>
     <link rel="self" href="https://bantu4me.github.io/atom.xml"/>
@@ -11,29 +11,16 @@
     <icon>https://bantu4me.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Gridea</rights>
     <entry>
-        <title type="html"><![CDATA[动态代理]]></title>
+        <title type="html"><![CDATA[代理模式与jdk动态代理的实现]]></title>
         <id>https://bantu4me.github.io/post/dong-tai-dai-li/</id>
         <link href="https://bantu4me.github.io/post/dong-tai-dai-li/">
         </link>
         <updated>2020-03-07T16:41:14.000Z</updated>
         <summary type="html"><![CDATA[<h1 id="代理模式与jdk动态代理的实现">代理模式与jdk动态代理的实现</h1>
-<p>申请了公众号，写一篇博客试试。内容为学习总结，参考了部分资料，不能完全保证正确性。如有错误的地方，希望看到各位的指教。</p>
+<p>试着总结，写了第一篇博客，不对的地方，希望看到的朋友可以指正，谢谢。😃</p>
 ]]></summary>
         <content type="html"><![CDATA[<h1 id="代理模式与jdk动态代理的实现">代理模式与jdk动态代理的实现</h1>
-<p>申请了公众号，写一篇博客试试。内容为学习总结，参考了部分资料，不能完全保证正确性。如有错误的地方，希望看到各位的指教。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://bantu4me.github.io/post/hello-gridea/</id>
-        <link href="https://bantu4me.github.io/post/hello-gridea/">
-        </link>
-        <updated>2018-12-11T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+<p>试着总结，写了第一篇博客，不对的地方，希望看到的朋友可以指正，谢谢。😃</p>
 ]]></content>
     </entry>
 </feed>

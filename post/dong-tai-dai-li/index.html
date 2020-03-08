@@ -2,21 +2,21 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>动态代理 | Gridea</title>
-<link rel="shortcut icon" href="https://bantu4me.github.io/favicon.ico?v=1583644171171">
+<title>代理模式与jdk动态代理的实现 | Gridea</title>
+<link rel="shortcut icon" href="https://bantu4me.github.io/favicon.ico?v=1583645792906">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://bantu4me.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="动态代理 | Gridea - Atom Feed" href="https://bantu4me.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="代理模式与jdk动态代理的实现 | Gridea - Atom Feed" href="https://bantu4me.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
     <meta name="description" content="代理模式与jdk动态代理的实现
-申请了公众号，写一篇博客试试。内容为学习总结，参考了部分资料，不能完全保证正确性。如有错误的地方，希望看到各位的指教。
+试着总结，写了第一篇博客，不对的地方，希望看到的朋友可以指正，谢谢。😃
 
 代理模式
-代理模式在笔面试中较常见，用于对目标对象功能的增强。先总结代理，是因为spr..." />
-    <meta name="keywords" content="" />
+代理模式在笔面试中较常见，用于对目标对象功能的增强。spring，mybatis等框架底层也都使用了动态代理。下面从一个静..." />
+    <meta name="keywords" content="java" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
@@ -25,7 +25,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://bantu4me.github.io">
-  <img class="avatar" src="https://bantu4me.github.io/images/avatar.png?v=1583644171171" alt="">
+  <img class="avatar" src="https://bantu4me.github.io/images/avatar.png?v=1583645792906" alt="">
   </a>
   <h1 class="site-title">
     Gridea
@@ -78,7 +78,7 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              动态代理
+              代理模式与jdk动态代理的实现
             </h2>
             <div class="post-info">
               <span>
@@ -88,15 +88,19 @@
                 21 min read
               </span>
               
+                <a href="https://bantu4me.github.io/tag/bZ2UwMsxM/" class="post-tag">
+                  # java
+                </a>
+              
             </div>
             
             <div class="post-content-wrapper">
               <div class="post-content">
                 <h1 id="代理模式与jdk动态代理的实现">代理模式与jdk动态代理的实现</h1>
-<p>申请了公众号，写一篇博客试试。内容为学习总结，参考了部分资料，不能完全保证正确性。如有错误的地方，希望看到各位的指教。</p>
+<p>试着总结，写了第一篇博客，不对的地方，希望看到的朋友可以指正，谢谢。😃</p>
 <!-- more -->
 <h2 id="代理模式">代理模式</h2>
-<p>代理模式在笔面试中较常见，用于对目标对象功能的增强。先总结代理，是因为spring，mybatis等框架底层都使用了动态代理。下面从一个静态代理的例子看代理模式的使用。</p>
+<p>代理模式在笔面试中较常见，用于对目标对象功能的增强。spring，mybatis等框架底层也都使用了动态代理。下面从一个静态代理的例子看代理模式的使用。</p>
 <h3 id="静态代理">静态代理</h3>
 <p>假设有一个接口Dao，定义了相关的查询逻辑。还有实现了Dao接口的业务类，DaoImpl。</p>
 <pre><code>/**
@@ -756,7 +760,7 @@ public class $Proxy implements Dao{
 ===============================================
 </code></pre>
 <p>这样的使用方式，就跟jdk动态代理是一样的了。</p>
-<h3 id="jdk动态代理源码">jdk动态代理源码</h3>
+<h2 id="jdk动态代理源码">jdk动态代理源码</h2>
 <p>上面说，自定义的动态代理，跟jdk代理本质是一样的(本来就是看了源码仿造实现的)。下面看看jdk的动态代理如何做的。</p>
 <p>跟踪Proxy.newInstance方法查看源码：</p>
 <p><img src="https://s2.ax1x.com/2020/02/17/3iEhnI.png" alt="3iEhnI.png" loading="lazy"><br>
@@ -873,7 +877,6 @@ public void test5() throws IOException {
 }
 </code></pre>
 <p>可以看到，上面代码中实际对方法增强的地方，跟上面模拟的是差不多的，都是借助了InvocationHandler来实现了代理逻辑的动态。</p>
-<!-- more -->
 
               </div>
               <div class="toc-container">
@@ -895,9 +898,9 @@ public void test5() throws IOException {
 <li><a href="#%E5%8F%82%E8%80%83jdk%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86">参考jdk动态代理</a></li>
 </ul>
 </li>
-<li><a href="#jdk%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86%E6%BA%90%E7%A0%81">jdk动态代理源码</a></li>
 </ul>
 </li>
+<li><a href="#jdk%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86%E6%BA%90%E7%A0%81">jdk动态代理源码</a></li>
 </ul>
 </li>
 </ul>
@@ -907,15 +910,6 @@ public void test5() throws IOException {
           </article>
         </div>
 
-        
-          <div class="next-post">
-            <div class="next">下一篇</div>
-            <a href="https://bantu4me.github.io/post/hello-gridea/">
-              <h3 class="post-title">
-                Hello Gridea
-              </h3>
-            </a>
-          </div>
         
 
         
